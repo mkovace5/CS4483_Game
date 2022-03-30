@@ -7,13 +7,11 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
-    public GameObject levelsUI;
 
     // Start is called before the first frame update
     void Start()
     {
         pauseMenuUI.SetActive(false);
-        levelsUI.SetActive(false);
     }
 
     // Update is called once per frame
@@ -57,12 +55,8 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void goBack(){
-        levelsUI.SetActive(true);
         Global.isGamePaused = false;
         Time.timeScale = 1f;
-    }
-    public void loadLevel1(){
-        levelsUI.SetActive(false);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("Levels");
     }
 }
