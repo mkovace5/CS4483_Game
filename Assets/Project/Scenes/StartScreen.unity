@@ -786,6 +786,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenuUI: {fileID: 559431346}
   helpUI: {fileID: 1047817191}
+  survivalBtn: {fileID: 1820896063}
+  survivalTxt: {fileID: 514391969}
 --- !u!1 &817092047
 GameObject:
   m_ObjectHideFlags: 0
