@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class Person : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class Person : MonoBehaviour
     public AudioSource sound;
     private Rect audiorect;
     public AudioClip bark;
+    int sceneIndex, levelPassed;
 
     bool ate = false;
 
@@ -29,6 +31,8 @@ public class Person : MonoBehaviour
         gameOverUI.SetActive(false);   
         dogCount = initialDogs;
         GetComponent<AudioSource> ().clip = bark;
+        sceneIndex = SceneManager.GetActiveScene ().buildIndex;
+        levelPassed = PlayerPrefs.GetInt("LevelPassed"); 
     }
 
     // Update is called once per frame
@@ -85,7 +89,7 @@ public class Person : MonoBehaviour
             Destroy(coll.gameObject);
 
             if(dogCount == 0){
-                GameOver();
+                YouWin();
             }
 
             GetComponent<AudioSource> ().Play ();
@@ -99,8 +103,17 @@ public class Person : MonoBehaviour
         }
     }
 
-    public void GameOver(){
+    public void YouWin(){
         Time.timeScale = 0f;
         winScreenUI.SetActive(true);
+
+        if (sceneIndex == 17)
+            //TODO: make You Win screen that directs you back to main menu
+			// Invoke ("loadMainMenu", 1f);
+            return;
+		else {
+			if (levelPassed < (sceneIndex-1))
+				PlayerPrefs.SetInt ("LevelPassed", (sceneIndex-1));
+		    }
     }
 }
