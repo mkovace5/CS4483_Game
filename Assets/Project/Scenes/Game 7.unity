@@ -1525,6 +1525,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 359801742}
   winScreenUI: {fileID: 2125423442}
+  spawnDogs: {fileID: 786463639}
   initialDogs: 15
   dogCount: 0
   sound: {fileID: 1493980488}
@@ -2138,6 +2139,8 @@ MonoBehaviour:
   borderBottom: {fileID: 579175960}
   borderLeft: {fileID: 708038676}
   borderRight: {fileID: 1357641518}
+  colliders: []
+  radius: 1
 --- !u!4 &786463640
 Transform:
   m_ObjectHideFlags: 0

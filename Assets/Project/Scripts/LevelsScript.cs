@@ -12,7 +12,7 @@ public class LevelsScript : MonoBehaviour
     void Start()
     {
         levelPassed = PlayerPrefs.GetInt("LevelPassed"); 
-        
+
         switch (levelPassed)
         {
             case 1:
@@ -133,6 +133,22 @@ public class LevelsScript : MonoBehaviour
                 level14.interactable = true;
                 break;
             case 14:
+                level2.interactable = true;
+                level3.interactable = true;
+                level4.interactable = true;
+                level5.interactable = true;
+                level6.interactable = true;
+                level7.interactable = true;
+                level8.interactable = true;
+                level9.interactable = true;
+                level10.interactable = true;
+                level11.interactable = true;
+                level12.interactable = true;
+                level13.interactable = true;
+                level14.interactable = true;
+                level15.interactable = true;
+                break;
+            case 15:
                 level2.interactable = true;
                 level3.interactable = true;
                 level4.interactable = true;

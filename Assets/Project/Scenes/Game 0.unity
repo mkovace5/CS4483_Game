@@ -1430,7 +1430,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 359801742}
   winScreenUI: {fileID: 2125423442}
-  initialDogs: 15
+  spawnDogs: {fileID: 786463639}
+  initialDogs: 7
   dogCount: 0
   sound: {fileID: 1493980488}
   bark: {fileID: 8300000, guid: 13a7fb3286f3a442db922ae174733273, type: 3}

@@ -9,8 +9,9 @@ public class Person : MonoBehaviour
     Vector2 dir = Vector2.right;
     public GameObject gameOverUI;
     public GameObject winScreenUI;
+    public SpawnDogs spawnDogs;
     public static bool GameIsOver = false;
-    public int initialDogs = 15;
+    public int initialDogs = 5;
     public int dogCount;
     public AudioSource sound;
     private Rect audiorect;
@@ -87,6 +88,7 @@ public class Person : MonoBehaviour
             dogCount--;        
             // Remove the Food
             Destroy(coll.gameObject);
+            spawnDogs.Spawn();
 
             if(dogCount == 0){
                 YouWin();
