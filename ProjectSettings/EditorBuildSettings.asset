@@ -15,6 +15,7 @@ EditorBuildSettings:
     path: Assets/Project/Scenes/Game 0.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
+<<<<<<< Updated upstream
     path: Assets/Project/Scenes/Game 1.unity
     guid: acf6737e1b704654f9aefc8d8226dd7e
   - enabled: 1
@@ -62,4 +63,8 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Project/Scenes/Game 15.unity
     guid: b7a885d63e36c9143bf7ca7263d0064b
+=======
+    path: Assets/Project/Scenes/Settings.unity
+    guid: 15f0f5096b9bc474ba734a767168fa63
+>>>>>>> Stashed changes
   m_configObjects: {}

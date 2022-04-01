@@ -29,6 +29,10 @@ public class StartMenu : MonoBehaviour
         SceneManager.LoadScene("Levels");
     }
 
+    public void GoToSettings(){
+        SceneManager.LoadScene("Settings");
+    }
+
     public void GoToMain(){
         helpUI.SetActive(false);
         survivalUI.SetActive(false);
