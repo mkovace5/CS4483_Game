@@ -2,22 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-using UnityEngine.SceneManagement;
 
-public class Person : MonoBehaviour
+public class PersonSurvival : MonoBehaviour
 {
     Vector2 dir = Vector2.right;
     public GameObject gameOverUI;
     public GameObject winScreenUI;
-    public float speed;
-    public SpawnDogs spawnDogs;
     public static bool GameIsOver = false;
-    public int initialDogs = 5;
+    public int initialDogs = 0;
     public int dogCount;
     public AudioSource sound;
     private Rect audiorect;
     public AudioClip bark;
-    int sceneIndex, levelPassed;
 
     bool ate = false;
 
@@ -29,12 +25,10 @@ public class Person : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("Move", speed, speed); 
+        InvokeRepeating("Move", 0.07f, 0.07f); 
         gameOverUI.SetActive(false);   
         dogCount = initialDogs;
         GetComponent<AudioSource> ().clip = bark;
-        sceneIndex = SceneManager.GetActiveScene ().buildIndex;
-        levelPassed = PlayerPrefs.GetInt("LevelPassed"); 
     }
 
     // Update is called once per frame
@@ -86,22 +80,11 @@ public class Person : MonoBehaviour
         if (coll.name.StartsWith("DogPrefab")) {
             // Get longer in next Move call
             ate = true;
-
-            if(sceneIndex == 17){
-                dogCount++;
-            }else{
-                dogCount--;        
-            }
+            dogCount++;        
             // Remove the Food
             Destroy(coll.gameObject);
+
             GetComponent<AudioSource> ().Play ();
-
-            if(dogCount == 0 && sceneIndex!=17){
-                YouWin();
-            }            
-
-            spawnDogs.Spawn();
-
         }
         // Collided with Tail or Border
         else {
@@ -111,17 +94,8 @@ public class Person : MonoBehaviour
         }
     }
 
-    public void YouWin(){
+    public void GameOver(){
         Time.timeScale = 0f;
         winScreenUI.SetActive(true);
-
-        if (sceneIndex == 17)
-            //TODO: make You Win screen that directs you back to main menu
-			// Invoke ("loadMainMenu", 1f);
-            return;
-		else {
-			if (levelPassed < (sceneIndex-1))
-				PlayerPrefs.SetInt ("LevelPassed", (sceneIndex-1));
-		    }
     }
 }
