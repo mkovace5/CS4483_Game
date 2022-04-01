@@ -84,16 +84,19 @@ public class Person : MonoBehaviour
         if (coll.name.StartsWith("DogPrefab")) {
             // Get longer in next Move call
             ate = true;
-            dogCount--;        
+
+            if(sceneIndex == 17){
+                dogCount++;
+            }else{
+                dogCount--;        
+            }
             // Remove the Food
             Destroy(coll.gameObject);
-
-            if(dogCount == 0){
-                YouWin();
-            }
-
             GetComponent<AudioSource> ().Play ();
 
+            if(dogCount == 0 && sceneIndex!=17){
+                YouWin();
+            }            
         }
         // Collided with Tail or Border
         else {

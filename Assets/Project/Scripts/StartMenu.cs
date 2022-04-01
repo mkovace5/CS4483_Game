@@ -11,6 +11,7 @@ public class StartMenu : MonoBehaviour
     int levelPassed;
     public Button survivalBtn;
     public Text survivalTxt;
+    public GameObject survivalUI;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,7 @@ public class StartMenu : MonoBehaviour
 
     public void GoToMain(){
         helpUI.SetActive(false);
+        survivalUI.SetActive(false);
         mainMenuUI.SetActive(true);
     }
 
@@ -39,6 +41,11 @@ public class StartMenu : MonoBehaviour
     }
 
     public void GoToSurvival(){
-        SceneManager.LoadScene("SurvivalMode");
+        mainMenuUI.SetActive(false);
+        survivalUI.SetActive(true);
+    }
+
+    public void StartSurvival(){
+        SceneManager.LoadScene("Survival Game");
     }
 }
