@@ -11,8 +11,8 @@ public class SpawnDogs : MonoBehaviour
     public Transform borderBottom;
     public Transform borderLeft;
     public Transform borderRight;
-    public Collider2D[] colliders;
-    public float radius = 10f;
+    public Collider[] colliders;
+    public LayerMask m_LayerMask;
 
 
     // Start is called before the first frame update
@@ -47,9 +47,9 @@ public class SpawnDogs : MonoBehaviour
     // Update is called once per frame
     bool PreventSpawnOverlap(Vector3 spawnPos)
     {
-        colliders = Physics2D.OverlapCircleAll(transform.position, radius);
+        colliders = Physics.OverlapBox(transform.position, transform.localScale / 2, Quaternion.identity, m_LayerMask);
 
-        for(int i=0; i< colliders.Length; i++){
+        for(int i=0; i<colliders.Length; i++){
             Vector3 centerPoint = colliders [i].bounds.center;
             float width = colliders [i].bounds.extents.x;
             float height = colliders [i].bounds.extents.y;
