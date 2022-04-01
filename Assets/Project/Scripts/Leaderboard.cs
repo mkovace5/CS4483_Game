@@ -19,18 +19,17 @@ public class Leaderboard : MonoBehaviour
     public InputField display;
     public List<PlayerInfo> collectedStats = new List<PlayerInfo>();
     public string names;
-    public float timer;
+    public float scores;
     private bool newSub;
 
     // Start is called before the first frame update
     void Start()
     {
         names = PlayerPrefs.GetString("Name", "");
-        timer = PlayerPrefs.GetFloat("Score");
+        scores = PlayerPrefs.GetFloat("Score");
         Debug.Log(names);
-        Debug.Log(timer);
+        Debug.Log(scores);
         LoadLeaderBoard();
-        //PlayerPrefs.DeleteAll();
     }
 
     // Update is called once per frame
@@ -52,7 +51,7 @@ public class Leaderboard : MonoBehaviour
 
         if (!newSub)
         {
-            PlayerInfo stats = new PlayerInfo(names, timer);
+            PlayerInfo stats = new PlayerInfo(names, scores);
             collectedStats.Add(stats);
             SortStats();
         }
