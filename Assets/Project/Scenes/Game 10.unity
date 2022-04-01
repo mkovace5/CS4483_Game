@@ -1525,7 +1525,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 359801742}
   winScreenUI: {fileID: 2125423442}
-  initialDogs: 15
+  speed: 0.056
+  spawnDogs: {fileID: 786463639}
+  initialDogs: 25
   dogCount: 0
   sound: {fileID: 1493980488}
   bark: {fileID: 8300000, guid: 13a7fb3286f3a442db922ae174733273, type: 3}
@@ -2328,6 +2330,10 @@ MonoBehaviour:
   borderBottom: {fileID: 579175960}
   borderLeft: {fileID: 708038676}
   borderRight: {fileID: 1357641518}
+  colliders: []
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!4 &786463640
 Transform:
   m_ObjectHideFlags: 0
@@ -2336,8 +2342,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 786463638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.49012, y: 4.1686296, z: 1.4751649}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 100, y: 100, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0

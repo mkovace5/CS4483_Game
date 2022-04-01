@@ -12,7 +12,7 @@ public class LevelsScript : MonoBehaviour
     void Start()
     {
         levelPassed = PlayerPrefs.GetInt("LevelPassed"); 
-        
+
         switch (levelPassed)
         {
             case 1:

@@ -9,8 +9,10 @@ public class Person : MonoBehaviour
     Vector2 dir = Vector2.right;
     public GameObject gameOverUI;
     public GameObject winScreenUI;
+    public float speed;
+    public SpawnDogs spawnDogs;
     public static bool GameIsOver = false;
-    public int initialDogs = 15;
+    public int initialDogs = 5;
     public int dogCount;
     public AudioSource sound;
     private Rect audiorect;
@@ -27,7 +29,7 @@ public class Person : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("Move", 0.07f, 0.07f); 
+        InvokeRepeating("Move", speed, speed); 
         gameOverUI.SetActive(false);   
         dogCount = initialDogs;
         GetComponent<AudioSource> ().clip = bark;
@@ -97,6 +99,9 @@ public class Person : MonoBehaviour
             if(dogCount == 0 && sceneIndex!=17){
                 YouWin();
             }            
+
+            spawnDogs.Spawn();
+
         }
         // Collided with Tail or Border
         else {

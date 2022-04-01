@@ -25,5 +25,6 @@ public class WinScript : MonoBehaviour
 
     public void nextLevel(){
 		SceneManager.LoadScene (sceneIndex + 1);
+        Time.timeScale = 1f;
     }
 }
