@@ -1080,6 +1080,7 @@ GameObject:
   - component: {fileID: 763533876}
   - component: {fileID: 763533875}
   - component: {fileID: 763533879}
+  - component: {fileID: 763533880}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1185,6 +1186,21 @@ MonoBehaviour:
   survivalBtn: {fileID: 1820896063}
   survivalTxt: {fileID: 514391969}
   survivalUI: {fileID: 2069944788}
+--- !u!114 &763533880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763533874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b24b2463e1792f740845048b3c15e853, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  display: {fileID: 2139445165}
+  names: 
+  scores: 0
 --- !u!1 &813077740
 GameObject:
   m_ObjectHideFlags: 0
