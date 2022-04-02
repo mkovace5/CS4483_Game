@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class WinScript : MonoBehaviour
 {
     public GameObject winScreenUI;
-    public GameObject comingSoonUI;
     int sceneIndex;
 
     // Start is called before the first frame update
