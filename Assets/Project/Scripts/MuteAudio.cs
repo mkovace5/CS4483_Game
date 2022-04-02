@@ -37,5 +37,8 @@ public class MuteAudio : MonoBehaviour
         Global.isMute = mute;
     }
 
+    public void ResetStats(){
+        PlayerPrefs.DeleteAll();
+    }
 
 }

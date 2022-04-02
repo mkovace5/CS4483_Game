@@ -2447,7 +2447,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1477043704}
         m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
         m_MethodName: Retry
         m_Mode: 1
@@ -2991,7 +2991,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1477043704}
         m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -3626,7 +3626,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1477043706}
         m_TargetAssemblyTypeName: SurvivalGameOver, Assembly-CSharp
         m_MethodName: SubmitButton
         m_Mode: 1

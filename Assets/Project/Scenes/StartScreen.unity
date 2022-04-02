@@ -1186,7 +1186,7 @@ MonoBehaviour:
   survivalBtn: {fileID: 1820896063}
   survivalTxt: {fileID: 514391969}
   survivalUI: {fileID: 2069944788}
-  leaderBoardUI: {fileID: 0}
+  leaderBoardUI: {fileID: 1887225253}
 --- !u!114 &763533880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1287,7 +1287,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 763533879}
         m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: GoToSurvival
+        m_MethodName: BackToSurvival
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3613,7 +3613,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Sound
+  m_Text: Settings
 --- !u!222 &2080640425
 CanvasRenderer:
   m_ObjectHideFlags: 0
